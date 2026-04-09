@@ -1,0 +1,11 @@
+fastapi
+uvicorn
+pydantic
+openai
+PyPDF2
+chromadb
+sentence-transformers
+google-generativeai
+requests
+pytz
+python-multipart

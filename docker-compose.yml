@@ -1,0 +1,22 @@
+version: '3.8'
+services:
+  backend:
+    build: .
+    ports:
+      - "8080:8080"
+    environment:
+      - WAHA_URL=http://waha:3000
+      - BACKEND_URL=http://SEU_IP_OU_DOMINIO:8080 # Troque aqui pelo IP do seu servidor Ocean Digital
+    volumes:
+      - ./database:/app/database
+      - ./kb_files:/app/kb_files
+      - ./static:/app/static
+    depends_on:
+      - waha
+
+  waha:
+    image: devlikeapro/waha:latest
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./waha_session:/app/.waha

@@ -1,0 +1,15 @@
+# Ignorar pastas pesadas e de ambiente
+database/
+kb_files/
+waha_session/
+venv/
+__pycache__/
+*.pyc
+.env
+
+# Ignorar arquivos antigos que estão na pasta raiz
+backend/
+frontend/
+frontend-static/
+config.json
+history.json
